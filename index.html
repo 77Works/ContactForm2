@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Join our Email List for email form</title>
+
+
+<script>
+
+	
+var UserName, userEmail, adminEmail, bodyText;
+
+adminEmail ="7minuteswebsites@gmail.com";
+
+userEmail ="7minuteswebsites@gmail.com";
+
+</script>
+
+
+<script src=
+	"https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script type="text/javascript">
+	function sendEmail() {
+
+	Email.send({
+		Host: "Smtp.elasticemail.com",
+		Username: "7minuteswebsites@gmail.com",
+		Password: "D602D8A6230363304AA3F8A87D93EFBB387A",
+		To: userEmail,
+		From: adminEmail,
+		Subject: "Email from New Atlantis site",
+		Body: bodyText,
+	})
+		.then(function (message) {
+		//alert("mail sent successfully")
+
+         
+		  document.getElementById('TheForm').style.display="none";
+		  document.getElementById('OutterDiv').innerHTML="<b style='color:#4ec0fb;'>Mail sent successfully</b>"
+
+
+		});
+	}
+</script>
+</head>
+
+<body>
+	
+    <div class="mainDiv" id="OutterDiv">
+	
+
+                    
+            <div class="mainDiv2" id="TheForm" > 
+                <input id="Usertext33"  class='Input4' type="text" /> <button class='Btn4' onclick="setVariables(); sendEmail()">Join</button>
+           </div>
+
+	</div>
+
+
+
+		<script>
+                
+				 function setVariables(){
+
+					//var hh = document.getElementById('Username33').value;
+
+					//var hb = document.getElementById('Usermail33').value;
+
+					var ht = document.getElementById('Usertext33').value;
+
+					//UserName= hh;
+
+					//userEmail = hb;
+
+					bodyText= ht;
+
+
+				 }
+
+
+		</script>
+
+
+
+<style>
+
+	*{
+
+		  margin: 0;
+		  padding: 0;
+	}
+
+.mainDiv{
+
+	  width: 90%;
+
+
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+
+	  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body{
+
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	 
+	   height: 100vh;
+
+	  padding: 40px;
+
+      background-color: black;
+
+
+	   
+
+}
+
+
+
+::-webkit-scrollbar {
+                       display: none;
+                 }
+
+
+
+
+
+
+                 
+.Btn4{
+      
+      border: 1px solid #4ec0fb;
+      border-radius: 30px;
+      color: #4ec0fb;
+   
+      background-color: transparent;
+      font-size: 19px;
+      padding: 7px;
+      min-width: 90px;
+  
+  }
+  
+  .Btn4:hover{
+  
+     background-color: #4ec0fb;
+     color: white;
+  }
+  
+  
+  .Input4{
+  
+        padding: 10px;
+        border-radius: 30px;
+        outline: none;
+        border: 1px solid #fddf16;
+  }
+  
+  .Input4:hover{
+  
+      border: 3px solid #fddf16;
+  }
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+</body>
+
+</html>
